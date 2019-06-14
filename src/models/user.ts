@@ -1,7 +1,7 @@
 export class User {
     user_id: number // primary key
     username: string
-    password: string
+    passwd: string
     first_name: string
     last_name: string
     email: string
@@ -14,7 +14,7 @@ export class User {
     role: string[], permit_id:number) {
         this.user_id = user_id || 0;
         this.username = username;
-        this.password = password;
+        this.passwd = password;
         this.first_name = first_name;
         this.last_name= last_name;
         this.email = email;
