@@ -1,3 +1,5 @@
+# start: "npm install"
+
 # Parking Management System
 
 Software for managing a large parking complex.
