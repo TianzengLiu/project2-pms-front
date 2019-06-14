@@ -1,11 +1,11 @@
 export class Permit {
     permit_id: number // primary key
-    parking_spot: number
+    parking_spot: string
     vehicle_license: string
     initial_date: number
     expiry_date: number
 
-    constructor(permit_id: number, parking_spot: number, 
+    constructor(permit_id: number, parking_spot: string = '', 
         vehicle_license: string = '', initial_date: number, 
         expiry_date: number) {
             this.permit_id = permit_id;
