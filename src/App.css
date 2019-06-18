@@ -55,6 +55,12 @@ li{
   font-size: 120%
 }
 
+span{
+  padding-left:15%;
+  float: left;
+}
+
+
 .navbar{
   color: #eeeeee00;
 }
