@@ -1,19 +1,70 @@
 import React from 'react'
 import { SignUpButton } from '../navbar/signup.component';
+import { IState } from '../../reducers';
+import { loginaction } from '../../actions/login.action';
+import { connect } from 'react-redux';
 
-export class LoginComponent extends React.Component {
+
+class LoginComponent extends React.Component<any,any> {
+    
+    constructor(props) {
+        super(props);
+
+        this.state = {
+            modal: false,
+            username: '',
+            password:'',
+        
+
+        };
+    }
+
+
+    updateUsername = (event) => {
+        // console.log(event)
+        this.setState({
+            username: event.target.value
+        })
+    }
+    
+    updatePassword = (event)=>{
+        this.setState({
+            password: event.target.value
+        })
+    }
+
+    //functtion to insert user info to the database
+    loginfunc = (event) => {
+        event.preventDefault()
+     
+        this.props.login(this.state.username, this.state.password)
+
+      
+    
+        // this.props.history.push('/mooom')
+        console.log(this.state.currentUser)
+    
+
+    }
+
+    componentDidMount() {
+        console.log(this.props)
+      }
+    
+    
+    
     render() {
         return (
             <div id='back'>
                 <div id='formid'>
-                <form>
+                <form onSubmit={this.loginfunc}>
                     <div className="form-group"/>
                         {/* <label htmlFor="exampleInputEmail1">Email address</label> */}
-                        <input type="email" className="form-control" id="exampleInputEmail1" aria-describedby="emailHelp" placeholder="Enter email"/>
+                        <input type="text" className="form-control"  onChange={this.updateUsername} value={this.state.username} placeholder="Enter Username"/>
                             <br></br>
                     <div className="form-group">
                             {/* <label htmlFor="exampleInputPassword1">Password</label> */}
-                            <input type="password" className="form-control" id="exampleInputPassword1" placeholder="Password"/>
+                            <input type="password" className="form-control" onChange={this.updatePassword} value={this.state.password} placeholder="Password"/>
                     </div>
 
                    
@@ -26,3 +77,17 @@ export class LoginComponent extends React.Component {
                         )
                     }
                 }
+
+
+const mapStateToProps = (state:IState) =>{
+    return {
+        currentUser: state.login.currentuser
+    }
+}
+
+
+const mapDispatchToProps = {
+   login:loginaction
+}
+
+export default connect(mapStateToProps, mapDispatchToProps)(LoginComponent)
