@@ -1,6 +1,7 @@
 import React from 'react'
 import { Link } from 'react-router-dom'
 import pmsLogo from '../../assets/rev-logo.png'  
+import { SignUpButton } from './signup.component';
 
 export class NavBarComponent extends React.Component {
     render() {
@@ -17,10 +18,11 @@ export class NavBarComponent extends React.Component {
             <div className="collapse navbar-collapse" id="navbarsExample04">
               <ul className="navbar-nav ml-auto margin-nav">
                 <li className="nav-item active">
-                  <Link to="/home" className="unset-anchor nav-link">Home</Link>
+                  <Link to="/home" className="unset-anchor nav-link">Login</Link>
                 </li>
                 <li className="nav-item active">
-                  <Link to="/login" className="unset-anchor nav-link">Log in</Link>
+                  {/* <Link to="/login" className="unset-anchor nav-link"></Link> */}
+                  <SignUpButton/>
                 </li>
                 
                
