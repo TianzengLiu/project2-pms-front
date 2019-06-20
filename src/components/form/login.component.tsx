@@ -42,8 +42,8 @@ class LoginComponent extends React.Component<any,any> {
       
     
         // this.props.history.push('/mooom')
-        console.log(this.state.currentUser)
-    
+        console.log(this.props.currentUser)
+
 
     }
 
@@ -53,8 +53,11 @@ class LoginComponent extends React.Component<any,any> {
     
     
     
+
     render() {
         return (
+           
+
             <div id='back'>
                 <div id='formid'>
                 <form onSubmit={this.loginfunc}>
