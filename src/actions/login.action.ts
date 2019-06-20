@@ -8,18 +8,15 @@ export const logintypes={
     SUCCESSFUL_LOGIN:'SUCCESSFUL LOGIN'
 }
 
-export const loginaction = (username:string, password:string)=> async (dispatch:any) =>{
+export const loginaction = (username:string)=> async (dispatch:any) =>{
 
     
   
     try{
 
-        const credentials = {
-            username,
-            password
-        }
+    
         // const response = await project2_pms.get('/users/username/' + username)
-         const response = await project2_pms.post('/login', credentials)
+         const response = await project2_pms.post('/user/username/'+username)
 
 
         if(response.status === 200){

@@ -7,7 +7,7 @@ import { connect } from 'react-redux';
 
 class LoginComponent extends React.Component<any,any> {
     
-    constructor(props) {
+    constructor(props:any) {
         super(props);
 
         this.state = {
@@ -20,7 +20,7 @@ class LoginComponent extends React.Component<any,any> {
     }
 
 
-    updateUsername = (event) => {
+    updateUsername = (event:) => {
         // console.log(event)
         this.setState({
             username: event.target.value
@@ -37,7 +37,7 @@ class LoginComponent extends React.Component<any,any> {
     loginfunc = (event) => {
         event.preventDefault()
      
-        this.props.login(this.state.username, this.state.password)
+        this.props.login(this.state.username)
 
       
     
