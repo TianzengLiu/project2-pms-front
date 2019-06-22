@@ -8,8 +8,9 @@ import {HomeComponent} from './components/home/home.component'
 import { Provider } from 'react-redux';
 import { store } from './store';
 import  LoginComponent  from './components/form/login.component';
-// import { financedashboard } from './components/dashboard/financedashboard';
- 
+import Financedashboard from './components/financedashboard/financedashboard';
+
+
 
 const App: React.FC = () => {
   return (
@@ -20,7 +21,7 @@ const App: React.FC = () => {
       <Switch>
         <Route exact path='/' component={HomeComponent}/>
         <Route path='/home' component={HomeComponent}/>
-        {/* <Route path='/finance' component={LoginComponent}/> */}
+        <Route path='/finance' component={Financedashboard}/>
 
       </Switch>
 
