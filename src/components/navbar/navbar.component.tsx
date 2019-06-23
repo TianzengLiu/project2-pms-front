@@ -1,7 +1,7 @@
 import React from 'react'
 import { Link, withRouter } from 'react-router-dom'
 import pmsLogo from '../../assets/rev-logo.png'  
-import { SignUpButton } from './signup.component';
+// import { SignUpButton } from './signup.component';
 import { IState } from '../../reducers';
 import { connect } from 'react-redux';
 
@@ -21,9 +21,9 @@ export class NavBarComponent extends React.Component<any,any>{
                 <li className="nav-item active">
                   <Link to="/" className="unset-anchor nav-link">Home</Link>
                 </li>
-                <li className="nav-item active">
+                {/* <li className="nav-item active">
                   <SignUpButton/>
-                </li>
+                </li> */}
                 </ul>
                 </div>
                 :
@@ -54,7 +54,7 @@ export class NavBarComponent extends React.Component<any,any>{
 
 const mapStateToProps = (state:IState) =>{
     return {
-        currentUser: state.login.currentuser
+        currentUser: state.login.currentUser
     }
 }
 

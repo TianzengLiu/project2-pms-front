@@ -1,5 +1,5 @@
 import React from 'react'
-import { SignUpButton } from '../navbar/signup.component';
+// import { SignUpButton } from '../navbar/signup.component';
 import { IState } from '../../reducers';
 import { loginaction } from '../../actions/login.action';
 import { connect } from 'react-redux';
@@ -101,7 +101,7 @@ class LoginComponent extends React.Component<any, any> {
 
                         <button id='font' type="submit" className="btn btn-primary form-control">Submit</button>
                         <br></br><br></br>
-                        <div><p id='font'>New User?</p> <SignUpButton /></div>
+                        {/* <div><p id='font'>New User?</p> <SignUpButton /></div> */}
                     </form>
                 </div>
             </div>
@@ -112,7 +112,7 @@ class LoginComponent extends React.Component<any, any> {
 
 const mapStateToProps = (state: IState) => {
     return {
-        currentUser: state.login.currentuser,
+        currentUser: state.login.currentUser
     }
 }
 
