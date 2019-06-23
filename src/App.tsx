@@ -9,6 +9,7 @@ import { store } from './store';
 import  LoginComponent  from './components/form/login.component';
 import Financedashboard from './components/financedashboard/financedashboard';
 import UsersComponent from './components/findAllUsers/find.all.users.component';
+import PermitsComponent from './components/findAllPermits/find.all.permits.component';
 
 const App: React.FC = () => {
   return (
@@ -21,6 +22,9 @@ const App: React.FC = () => {
         <Route path='/home' component={HomeComponent}/>
         <Route path='/finance' component={Financedashboard}/>
         <Route exact path='/user' component={UsersComponent} />
+        <Route exact path='/permit' component={PermitsComponent}/>
+        {/* <Route path='/finance' component={LoginComponent}/> */}
+
       </Switch>
     </div>
     </BrowserRouter>

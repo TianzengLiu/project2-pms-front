@@ -35,6 +35,14 @@ export class NavBarComponent extends React.Component<any,any>{
                 <li className="nav-item active">
                   <Link to="/user" className="unset-anchor nav-link">Users</Link>
                 </li>
+                <li className="nav-item active">
+                  <Link to="/permit" className="unset-anchor nav-link">Permits</Link>
+                </li>
+                {/* <li className="nav-item active">
+                  <Link to="/login" className="unset-anchor nav-link">Log in</Link>
+                </li> */}
+                
+               
               </ul>
             </div>
             }
