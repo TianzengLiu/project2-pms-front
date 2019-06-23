@@ -36,8 +36,8 @@ export class HomeComponent extends React.Component<any, any> {
     //functtion to insert user info to the database
     loginfunc = (event) => {
         event.preventDefault()
-
-        this.props.login(this.state.username, this.props.history)
+        
+        this.props.login(this.state.username, this.props.history, this.state.password)
 
 
 

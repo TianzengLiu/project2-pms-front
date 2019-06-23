@@ -2,6 +2,7 @@ import { combineReducers } from "redux";
 import { findAllUsersReducer } from "./find.all.users.reducer";
 import { findAllPermitsReducer } from "./find.all.permits.reducer";
 import { loginReducer } from "./login.reducer";
+import { User } from "../models/user";
 
 export interface IAllUsersState{
     users: undefined
@@ -12,7 +13,7 @@ export interface IAllPerimitsState{
 }
 
 export interface ILoginState{
-    currentUser: undefined
+    currentUser: User
 }
 
 export interface IState{

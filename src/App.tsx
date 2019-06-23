@@ -3,7 +3,7 @@ import './include/bootstrap'
 import './App.css'
 import {BrowserRouter, Switch, Route } from 'react-router-dom'
 import { NavBarComponent } from './components/navbar/navbar.component'
-import { HomeComponent } from './components/home/home.component'
+import HomeComponent from './components/home/home.component'
 import { Provider } from 'react-redux';
 import { store } from './store';
 import Financedashboard from './components/financedashboard/financedashboard';

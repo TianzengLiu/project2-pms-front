@@ -8,22 +8,27 @@ export const logintypes={
     SUCCESSFUL_LOGIN:'SUCCESSFUL LOGIN'
 }
 
-export const loginaction = (username:string, history)=> async (dispatch) =>{
+export const loginaction = (username:string, history, password:string)=> async (dispatch) =>{
 
-    
-  
+
+
     try{
 
-    
-        // const response = await project2_pms.get('/users/username/' + username)
-         const response = await project2_pms.get('/user/username/'+username)
+       const reqBody = {
+            username: username,
+            password: password
+        }
 
+        // const response = await project2_pms.get('/users/username/' + username)
+         const response = await project2_pms.post('/user/login', reqBody)
+
+        
 
         if(response.status === 200){
-            const user = response.data
+            const loginUser = response.data
             dispatch({
                 payload:{
-                    user: user
+                    user: loginUser
                 },
                 type: logintypes.SUCCESSFUL_LOGIN
             })
