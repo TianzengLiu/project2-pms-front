@@ -31,7 +31,7 @@
     background-image: url('./assets/parking.jpg');
     background-position: center;
     background-size:cover;
-    padding-bottom:20%; 
+    padding-bottom:70%; 
 }
 
 #formid{
@@ -55,8 +55,14 @@ li{
   font-size: 120%
 }
 
+/* #card{
+  padding-bottom: 50%
+} */
+
 span{
+  padding-top: 7%;
   padding-left:15%;
+  /* padding-right: 10%; */
   float: left;
 }
 

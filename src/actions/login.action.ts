@@ -8,7 +8,7 @@ export const logintypes={
     SUCCESSFUL_LOGIN:'SUCCESSFUL LOGIN'
 }
 
-export const loginaction = (username:string)=> async (dispatch) =>{
+export const loginaction = (username:string, history)=> async (dispatch) =>{
 
     
   
@@ -27,6 +27,11 @@ export const loginaction = (username:string)=> async (dispatch) =>{
                 },
                 type: logintypes.SUCCESSFUL_LOGIN
             })
+            
+            history.push('/finance') 
+            
+            
+           
         }else{
             dispatch({
                 type:logintypes.INVALID_CREDENTIALS
