@@ -1,6 +1,7 @@
 import { IAllUsersState } from '.'
 import { fetchUsersTypes } from '../actions/find.all.users.action'
 
+
 const initialState: IAllUsersState ={
     users: undefined
 }

@@ -6,7 +6,6 @@ import { NavBarComponent } from './components/navbar/navbar.component'
 import { HomeComponent } from './components/home/home.component'
 import { Provider } from 'react-redux';
 import { store } from './store';
-import  LoginComponent  from './components/form/login.component';
 import Financedashboard from './components/financedashboard/financedashboard';
 import UsersComponent from './components/findAllUsers/find.all.users.component';
 import PermitsComponent from './components/findAllPermits/find.all.permits.component';
