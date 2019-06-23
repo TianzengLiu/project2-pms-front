@@ -38,7 +38,7 @@ class LoginComponent extends React.Component<any, any> {
     loginfunc = (event) => {
         event.preventDefault()
 
-        this.props.login(this.state.username, this.props.currentUser, this.props.history)
+        this.props.login(this.state.username, this.props.history)
 
 
 

@@ -52,4 +52,4 @@ const mapStateToProps = (state:IState) =>{
 }
 
 
-export default connect(mapStateToProps)(withRouter(NavBarComponent))
+export default connect(mapStateToProps)(NavBarComponent)
