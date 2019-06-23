@@ -19,7 +19,7 @@ export class NavBarComponent extends React.Component<any,any>{
             <div className="collapse navbar-collapse" id="navbarsExample04">
               <ul className="navbar-nav ml-auto margin-nav">
                 <li className="nav-item active">
-                  <Link to="/home" className="unset-anchor nav-link">Login</Link>
+                  <Link to="/" className="unset-anchor nav-link">Home</Link>
                 </li>
                 <li className="nav-item active">
                   <SignUpButton/>
@@ -32,10 +32,9 @@ export class NavBarComponent extends React.Component<any,any>{
                   <li className="nav-item active">
                   <div className="unset-anchor nav-link">Welcome {this.props.currentUser && this.props.currentUser.firstName}</div>
                 </li>               
-
-
-                
-               
+                <li className="nav-item active">
+                  <Link to="/user" className="unset-anchor nav-link">Users</Link>
+                </li>
               </ul>
             </div>
             }

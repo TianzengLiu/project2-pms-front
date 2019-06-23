@@ -2,56 +2,27 @@ import React from 'react';
 import './include/bootstrap'
 import './App.css'
 import {BrowserRouter, Switch, Route } from 'react-router-dom'
-
-// import { NavBarComponent } from './components/navbar/navbar.component'
-import {HomeComponent} from './components/home/home.component'
+import { NavBarComponent } from './components/navbar/navbar.component'
+import { HomeComponent } from './components/home/home.component'
 import { Provider } from 'react-redux';
 import { store } from './store';
 import  LoginComponent  from './components/form/login.component';
 import Financedashboard from './components/financedashboard/financedashboard';
-
-
+import UsersComponent from './components/findAllUsers/find.all.users.component';
 
 const App: React.FC = () => {
   return (
     <Provider store = {store}>
     <BrowserRouter>
     <div className="App">
-      
+      <NavBarComponent/>
       <Switch>
         <Route exact path='/' component={HomeComponent}/>
         <Route path='/home' component={HomeComponent}/>
         <Route path='/finance' component={Financedashboard}/>
-
+        <Route exact path='/user' component={UsersComponent} />
       </Switch>
-
-
-
-
-
-
-
-
-
-
-
-
-
-
     </div>
-
-
-
-
-
-
-
-
-
-
-
-
-
     </BrowserRouter>
     </Provider>
   )
