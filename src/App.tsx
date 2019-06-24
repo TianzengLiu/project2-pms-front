@@ -16,6 +16,7 @@ import  AddPermitComponent  from './components/addpermit/addpermit.component';
 import  FindByUsernameComponent  from './components/findByUsername/findByUsername.component';
 import  FindBySpotComponent  from './components/findBySpot/findBySpot.component';
 import  FindByLicenseComponent  from './components/findByLicense/findByLicense.component';
+import  UpdatePermitComponent  from './components/findAllPermits/updatePermit/updatePermit.component';
 
 const App: React.FC = () => {
   return (
@@ -36,6 +37,7 @@ const App: React.FC = () => {
         <Route exact path='/user/username/:username' component={FindByUsernameComponent}/>
         <Route exact path='/permit/spot/:parkingSpot' component={FindBySpotComponent}/>
         <Route exact path='/permit/license/:vehicleLicense' component={FindByLicenseComponent}/>
+        <Route exact path='/permit/:edit_permit_id' component={UpdatePermitComponent}/>
         {/* <Route path='/finance' component={LoginComponent}/> */}
 
       </Switch>
