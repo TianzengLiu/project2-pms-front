@@ -35,7 +35,7 @@ export class PermitsComponent extends React.Component<any>{
                         <td>{permit.permitId}</td>
                         {/* <td><Link to={'/reimbursements/author/userId/' + permit.permitId}>{permit.username}</Link></td> */}
                         <td><Link to={'/permit/spot/' + permit.parkingSpot}>{permit.parkingSpot}</Link></td>
-                        <td>{permit.vehicleLicense}</td>
+                        <td><Link to={'/permit/license/' + permit.vehicleLicense}>{permit.vehicleLicense}</Link></td>
                         <td>{permit.initialDate}</td>
                         <td>{permit.expiryDate}</td>
                         {/* <td><button className="btn btn-primary"><Link to={'/permit/add'} style={{color:"white", textDecoration:"none"}}>Add</Link></button></td> */}
