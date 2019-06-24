@@ -38,6 +38,8 @@ export class PermitsComponent extends React.Component<any>{
                         <td>{permit.vehicleLicense}</td>
                         <td>{permit.initialDate}</td>
                         <td>{permit.expiryDate}</td>
+                        <td><button className="btn btn-primary"><Link to={'/permit/add'} style={{color:"white", textDecoration:"none"}}>Add</Link></button></td>
+                        <td><button className="btn btn-warning"><Link to={'/user/' + permit.permitId} style={{color:"white", textDecoration:"none"}}>Update</Link></button></td>
                     </tr>)
             })
         }
@@ -61,6 +63,9 @@ export class PermitsComponent extends React.Component<any>{
                             <th>Vehicle License</th>
                             <th>Initial Date</th>
                             <th>Expiry Date</th>
+                            <th>Add</th>
+                            <th>Update</th>
+                            
                         </tr>
                     </thead>
                     <tbody>

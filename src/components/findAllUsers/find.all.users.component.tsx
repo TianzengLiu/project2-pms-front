@@ -40,7 +40,7 @@ export class UsersComponent extends React.Component<any>{
                         <td>{user.role.roleName}</td>
                         <td><button className="btn btn-primary"><Link to={'/user/add/'} style={{color:"white", textDecoration:"none"}}>Add</Link></button></td>
                         <td><button className="btn btn-warning"><Link to={'/user/' + user.userId} style={{color:"white", textDecoration:"none"}}>Update</Link></button></td>
-                        <td><button className="btn btn-danger"><Link to={'/users/edit/' + user.userId} style={{color:"white", textDecoration:"none"}}>Delete</Link></button></td>
+                        {/* <td><button className="btn btn-danger"><Link to={'/user/' + user.userId} style={{color:"white", textDecoration:"none"}}>Delete</Link></button></td> */}
                     </tr>)
             })
         }
@@ -69,7 +69,7 @@ export class UsersComponent extends React.Component<any>{
                             <th>Role</th>
                             <th>Add</th>
                             <th>Update</th>
-                            <th>Delete</th>
+                            {/* <th>Delete</th> */}
                         </tr>
                     </thead>
                     <tbody>
