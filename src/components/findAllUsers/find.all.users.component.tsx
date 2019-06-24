@@ -33,7 +33,7 @@ export class UsersComponent extends React.Component<any>{
                 return (
                     <tr key={user.userId}>
                         <td><Link to={'/user/userId/' + user.userId}>{user.userId}</Link></td>
-                        <td><Link to={'/reimbursements/author/userId/' + user.userId}>{user.username}</Link></td>
+                        <td><Link to={'/user/username/' + user.username}>{user.username}</Link></td>
                         <td>{user.firstName}</td>
                         <td>{user.lastName}</td>
                         <td>{user.email}</td>

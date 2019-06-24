@@ -13,6 +13,7 @@ import  UserComponent  from './components/usercomponent/user.component';
 import  AddUserComponent  from './components/addUser/addUser.component';
 import  UpdateUserComponent  from './components/updateuser/updateuser.component';
 import  AddPermitComponent  from './components/addpermit/addpermit.component';
+import  FindByUsernameComponent  from './components/findByUsername/findByUsername.component';
 
 const App: React.FC = () => {
   return (
@@ -30,6 +31,7 @@ const App: React.FC = () => {
         <Route exact path='/user/add' component={AddUserComponent}/>
         <Route exact path='/user/:edit_user_id' component={UpdateUserComponent}/>
         <Route exact path='/permit/add' component={AddPermitComponent}/>
+        <Route exact path='/user/username/:username' component={FindByUsernameComponent}/>
         {/* <Route path='/finance' component={LoginComponent}/> */}
 
       </Switch>
