@@ -4,6 +4,7 @@ import { connect } from 'react-redux';
 import { findAllPermitsAction } from '../../actions/find.all.permits.action';
 import { Link } from 'react-router-dom'
 import { Permit } from '../../models/permit';
+import { NavBarComponent } from '../navbar/navbar.component';
 
 
 
@@ -48,6 +49,7 @@ export class PermitsComponent extends React.Component<any>{
         const permits = this.props.allPermits
         return(
             <div>
+               <NavBarComponent/>
                 <br/>
             <h1>Get All Permits</h1>
                 {/* {JSON.stringify(this.props.allPermits)} */}

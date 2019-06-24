@@ -30,7 +30,7 @@ export class NavBarComponent extends React.Component<any,any>{
                 <div className="collapse navbar-collapse" id="navbarsExample04">
                   <ul className="navbar-nav ml-auto margin-nav">
                   <li className="nav-item active">
-                  <div className="unset-anchor nav-link">Welcome {this.props.currentUser && this.props.currentUser.firstName}</div>
+                  <div className="unset-anchor nav-link"><i style={{fontWeight:500}}>Welcome</i> {this.props.currentUser && this.props.currentUser.firstName}</div>
                 </li>               
                 <li className="nav-item active">
                   <Link to="/user" className="unset-anchor nav-link">Users</Link>

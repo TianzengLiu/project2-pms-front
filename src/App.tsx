@@ -9,19 +9,21 @@ import { store } from './store';
 import Financedashboard from './components/financedashboard/financedashboard';
 import UsersComponent from './components/findAllUsers/find.all.users.component';
 import PermitsComponent from './components/findAllPermits/find.all.permits.component';
+import  UserComponent  from './components/usercomponent/user.component';
 
 const App: React.FC = () => {
   return (
     <Provider store = {store}>
     <BrowserRouter>
     <div className="App">
-      <NavBarComponent/>
+      {/* <NavBarComponent/> */}
       <Switch>
         <Route exact path='/' component={HomeComponent}/>
         <Route path='/home' component={HomeComponent}/>
         <Route path='/finance' component={Financedashboard}/>
         <Route exact path='/user' component={UsersComponent} />
         <Route exact path='/permit' component={PermitsComponent}/>
+        <Route exact path='/user/userId/:user_id' component={UserComponent}/>
         {/* <Route path='/finance' component={LoginComponent}/> */}
 
       </Switch>

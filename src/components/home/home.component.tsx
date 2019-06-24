@@ -36,7 +36,7 @@ export class HomeComponent extends React.Component<any, any> {
     //functtion to insert user info to the database
     loginfunc = (event) => {
         event.preventDefault()
-        
+
         this.props.login(this.state.username, this.props.history, this.state.password)
 
 
@@ -83,9 +83,9 @@ export class HomeComponent extends React.Component<any, any> {
 
     render() {
         return (
-
-
             <div id='back'>
+                <br/><br/><br/>
+                <h1 style={{color:"white"}}>Welcome Parking System</h1>
                 <div id='formid'>
                     <form onSubmit={this.loginfunc}>
                         <div className="form-group" />

@@ -7,7 +7,7 @@ export default class Financedashboard extends React.Component {
         return (
             <div>
             <NavBarComponent/>
-            <div id="back">
+            {/* <div id="back">
             <span>
               <div className="card">
                 <img src=""className="card-img-top" alt="..."></img>
@@ -66,7 +66,7 @@ export default class Financedashboard extends React.Component {
                 </div>
               </div>
             </span>
-          </div>
+          </div> */}
           </div>
         )
     }
