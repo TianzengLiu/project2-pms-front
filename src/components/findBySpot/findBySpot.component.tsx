@@ -3,7 +3,7 @@ import { Link, withRouter } from 'react-router-dom';
 import axios from 'axios'
 
 
-export class UserComponent extends React.Component<any, any>  {
+export class FindBySpotComponent extends React.Component<any, any>  {
     // state = {
     //     user : null
     // }
@@ -24,20 +24,20 @@ export class UserComponent extends React.Component<any, any>  {
     constructor(props) {
         super(props);
         this.state = {
-            user: null
+            permit: null
         }
     }
 
     
 
-    getUser = async () => {
+    getSpot = async () => {
 
         console.log('trying to get individual user')
         console.log(this.props) 
 
         try {
-            let id = this.props.match.params.user_id
-            const response = await fetch('http://localhost:8888/user/userId/' + id, {
+            let spot = this.props.match.params.parkingSpot
+            const response = await fetch('http://localhost:8888/permit/spot/' + spot, {
                 method: 'GET',
                 credentials: 'include',
                 headers: {
@@ -58,7 +58,7 @@ export class UserComponent extends React.Component<any, any>  {
                 console.log(resBody)
 
                 this.setState({
-                    user : resBody
+                    permit : resBody[0]
                 })
                 // this.props.history.push('/users')
 
@@ -79,7 +79,7 @@ export class UserComponent extends React.Component<any, any>  {
 
     //call the function getAllUsers() after first time render the page, this is the second time render the getAllUsers()
     componentDidMount() {
-        this.getUser()
+        this.getSpot()
     }
 
 
@@ -87,9 +87,9 @@ export class UserComponent extends React.Component<any, any>  {
 
     render() {
         return (
-            <div className ="user"> 
+            <div className ="permit"> 
             
-            <br/><br/><h1>I am an individual user</h1><br/><br/>
+            <br/><br/><h1>I am an individual permit</h1><br/><br/>
              {/* we need && to check the this.state.user to see if it is truthy because we render this first time,
              the initial state is null if not check then break in the first time*/}
              {/* <p>{this.state.user && this.state.user.username}</p> */}
@@ -97,19 +97,18 @@ export class UserComponent extends React.Component<any, any>  {
              to display in the browser */}
             {/* {JSON.stringify(this.state)} */}
              
-            <h4 className="center">Find user by UserId: {this.state.user && this.state.user.userId}</h4>
-            <p>Username: {this.state.user && this.state.user.username}</p>
-            <p>First Name: {this.state.user && this.state.user.firstName}</p>
-            <p>Last Name: {this.state.user && this.state.user.lastName}</p>
-            <p>Email: {this.state.user && this.state.user.email}</p>
-            <p>Role: {this.state.user && this.state.user.role.roleName}</p>
+            <h4 className="center">Find permit by Park Spot: {this.state.permit && this.state.permit.permitId}</h4>
+            <p>Parking Spot: {this.state.permit && this.state.permit.parkingSpot}</p>
+            <p>Vehicle License: {this.state.permit && this.state.permit.vehicleLicense}</p>
+            <p>Initial Date: {this.state.permit && this.state.permit.initialDate}</p>
+            <p>Expiry Date: {this.state.permit && this.state.permit.expiryDate}</p>
 
             <button className="btn btn-primary">
-                <Link to='/user/' style={{color:"black", textDecoration:"none"}}>Go back to users</Link>
+                <Link to='/permit/' style={{color:"black", textDecoration:"none"}}>Go back to permits</Link>
                 </button>
             </div>
         )
     }
 }
 
-export default withRouter(UserComponent)
+export default withRouter(FindBySpotComponent)
